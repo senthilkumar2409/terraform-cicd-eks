@@ -1,4 +1,4 @@
-trotpipeline {
+pipeline {
     agent any
 
     stages {
