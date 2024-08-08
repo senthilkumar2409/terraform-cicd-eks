@@ -29,7 +29,7 @@ data "aws_ami" "amzn3" {
 }
 
 data "aws_key_pair" "terraform_prod" {
-  key_name    = "mac_key_new.pem"
+  key_name    = "mac"
   #key_pair_id = "key-0dbef89963e24c292"
 }
 
