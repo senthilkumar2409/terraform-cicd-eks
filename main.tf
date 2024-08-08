@@ -87,10 +87,7 @@ pipeline {
         stage('Login to ecr registry and docker push') {
             steps {
                 script{
-                    withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'ecr_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-    // some block
-                   sh ' aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 975049977826.dkr.ecr.us-east-1.amazonaws.com'
-                   sh ' docker tag shopping_docker:latest 975049977826.dkr.ecr.us-east-1.amazonaws.com/shopping_docker:${BUILD_NUMBER}'
+         er tag shopping_docker:latest 975049977826.dkr.ecr.us-east-1.amazonaws.com/shopping_docker:${BUILD_NUMBER}'
                    sh ' docker push 975049977826.dkr.ecr.us-east-1.amazonaws.com/shopping_docker:${BUILD_NUMBER}'
                     }
                 }
