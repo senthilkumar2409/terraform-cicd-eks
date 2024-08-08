@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "github.com/terraform-cicd-eks/modules/vpc"
+  source = "github.com/senthilkumar2409/terraform-cicd-eks/modules/vpc"
   #aws_region = var.aws_region
   cidr_block = var.cidr_block
   enable_dns_hostnames = var.enable_dns_hostnames
@@ -12,7 +12,7 @@ module "vpc" {
 
 module "ec2" {
 
-  source = "github.com/terraform-cicd-eks/modules/ec2"
+  source = "github.com/senthilkumar2409/terraform-cicd-eks/modules/ec2"
   #region = var.aws_region
   #for_each = [ for sub in module.vpc.aws_subnet_id : sub.id ]
   #count = length(module.vpc.aws_subnet_id)
