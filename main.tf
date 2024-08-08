@@ -81,10 +81,7 @@ pipeline {
         }
         stage('docker image scan') {
             steps {
-                sh 'trivy -f table -o scan_report.txt image shopping_docker:latest' 
-            }
-        }
-        stage('Login to ecr registry and docker push') {
+       registry and docker push') {
             steps {
                 script{
          er tag shopping_docker:latest 975049977826.dkr.ecr.us-east-1.amazonaws.com/shopping_docker:${BUILD_NUMBER}'
