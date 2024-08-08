@@ -1,4 +1,4 @@
-pipeline {
+trotpipeline {
     agent any
 
     stages {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('terraform deploy') {
             steps {
-                sh 'terraform apply -var-file="vpc_ec2.tfvars" -auto-approve'
+                sh 'terraform destroy -var-file="vpc_ec2.tfvars" -auto-approve'
             }
         }
     }
