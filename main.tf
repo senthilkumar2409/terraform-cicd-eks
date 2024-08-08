@@ -70,13 +70,6 @@ pipeline {
         maven 'maven3'
         //Docker 'docker'// This should match the name of the Maven tool in the Global Tool Configuration
     }
-
-    stages {
-        stage('git checkout') {
-            steps {
-                git credentialsId: 'cred', url: 'https://github.com/senthilcsk24/shopping_cart.git'
-            }
-        }
         stage('maven build') {
             steps {
                 sh 'mvn package install -Dmaven.test.skip=true' 
