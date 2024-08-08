@@ -4,8 +4,11 @@ pipeline {
     stages {
         stage('terraform initialization') {
             steps {
-                sh 'terraform init'
-            }
+            withCredentials([gitUsernamePassword(credentialsId: 'cred', gitToolName: 'Default')]) {
+    // some block
+            sh 'terraform init'
+            }  
+          }
         }    
         stage('terraform validation') {
             steps {
