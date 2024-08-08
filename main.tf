@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "/workspaces/terraform-modules/workspace/modules/vpc"
+  source = "//modules/vpc"
   #aws_region = var.aws_region
   cidr_block = var.cidr_block
   enable_dns_hostnames = var.enable_dns_hostnames
@@ -9,9 +9,10 @@ module "vpc" {
   availability_zone = var.availability_zone 
   enable_nat_gateway = var.enable_nat_gateway
 }
-/*
-module "ec2" {cd ..
 
+module "ec2" {
+
+  source = "//modules/ec2"
   #region = var.aws_region
   #for_each = [ for sub in module.vpc.aws_subnet_id : sub.id ]
   #count = length(module.vpc.aws_subnet_id)
@@ -29,7 +30,7 @@ module "ec2" {cd ..
 
   depends_on = [module.vpc]
 }
-*/
+
 # cluster creation took 8 min and node group took 2 min
 module "eks" {
   source = "/workspaces/terraform-modules/workspace/modules/eks"
