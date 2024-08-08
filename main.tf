@@ -30,7 +30,7 @@ module "ec2" {
 
   depends_on = [module.vpc]
 }
-
+/*
 # cluster creation took 8 min and node group took 2 min
 module "eks" {
   source = "/workspaces/terraform-modules/workspace/modules/eks"
@@ -61,7 +61,7 @@ module "eks" {
   depends_on = [ module.vpc ]
 
 }
-
+*/
 /*
 pipeline {
     agent any
