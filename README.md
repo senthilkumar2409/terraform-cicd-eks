@@ -6,7 +6,7 @@ In today's fast-paced DevOps environment, automation is the key to efficiency an
 we’ll see the seamless integration of Jenkins and Terraform to automate the EKS cluster setup—from initial configuration to deployment—empowering.
 
 <h2>Pre-requistes</h2>
-<b>Jenkins Installation</b> -  Setup a Jenkins server by installing Jenkins on EC2 instance.
+<b>Jenkins Installation</b> -  Setup a Jenkins server by installing Jenkins on EC2 instance.  
 
 <b>Terraform Installation</b> - Install Terraform on the Jenkins server.
 
