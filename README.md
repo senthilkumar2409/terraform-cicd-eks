@@ -5,4 +5,4 @@ In today's fast-paced DevOps environment, automation is the key to efficiency an
 
 we’ll see the seamless integration of Jenkins and Terraform to automate the EKS cluster setup—from initial configuration to deployment—empowering.
 
-##Pre-requistes##
+<h2>Pre-requistes</h2>
