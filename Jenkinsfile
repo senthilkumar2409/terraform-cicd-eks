@@ -5,16 +5,10 @@ pipeline {
         stage('terraform initialization') {
             steps {
             withCredentials([gitUsernamePassword(credentialsId: 'cred', gitToolName: 'Default')]) {
-    // some block
-            sh 'terraform init'
+                sh 'terraform init'
             }  
           }
         }    
-        stage('terraform validation') {
-            steps {
-                sh 'terraform validate'
-            }
-        }
         stage('terraform plan') {
             steps {
                 sh 'terraform plan -var-file="vpc_ec2.tfvars"'
