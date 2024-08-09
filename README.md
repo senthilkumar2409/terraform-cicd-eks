@@ -7,5 +7,7 @@ we’ll see the seamless integration of Jenkins and Terraform to automate the EK
 
 <h2>Pre-requistes</h2>
 <b>Jenkins Installation</b> -  Setup a Jenkins server by installing Jenkins on EC2 instance.
+
 <b>Terraform Installation</b> - Install Terraform on the Jenkins server.
+
 <b>AWS CLI Installation</b> - Install the AWS Command Line Interface (CLI) and configure it with your AWS credentials (or) Attach the IAM role on Jenkins server to access the aws cloud
