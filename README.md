@@ -118,4 +118,9 @@ variable "cluster_public_access_cidrs" { }
 ```
 VPC and EKS sub-module files are in modules directory
 
+## Create pipeline Job:
+
+Create a pipeline and add the github repository url, credentails and branch
+
+<img width="794" alt="Screenshot 2024-08-09 at 3 59 51 PM" src="https://github.com/user-attachments/assets/f9d01232-cd49-432c-8ea6-5d9ca6289c7f">
 
