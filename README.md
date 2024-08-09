@@ -120,12 +120,13 @@ VPC and EKS sub-module files are in modules directory
 
 ## Configure a pipeline Job:
 
-Create a pipeline and add the github repository url, credentails and branch
+* Create a pipeline and add the github repository url, credentails and branch
 
 <img width="794" alt="Screenshot 2024-08-09 at 3 59 51 PM" src="https://github.com/user-attachments/assets/f9d01232-cd49-432c-8ea6-5d9ca6289c7f">
 <img width="806" alt="Screenshot 2024-08-09 at 4 00 13 PM" src="https://github.com/user-attachments/assets/26688a97-620b-4f45-9f78-e75839804027">
 
-configure a github webhook to trigger a jenkins pipeline job automatically when changes are pushed to the GitHub repository.
+
+* configure a github webhook to trigger a jenkins pipeline job automatically when changes are pushed to the GitHub repository.
 
 <img width="862" alt="Screenshot 2024-08-09 at 4 00 26 PM" src="https://github.com/user-attachments/assets/e7ad9836-dd09-4e28-9813-522e0e6d5e10">
 
