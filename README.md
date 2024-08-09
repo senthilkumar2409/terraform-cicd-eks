@@ -13,6 +13,19 @@ we’ll see the seamless integration of Jenkins and Terraform to automate the EK
 
 **AWS CLI Installation** - Install the AWS Command Line Interface (CLI) and configure it with your AWS credentials (or) Attach the IAM role on Jenkins server to access the aws cloud
 
-## Terraform Configuration
+## Terraform Configuration File structure
+
+```
+terraform-cicd-eks/
+├── modules/
+│   ├──vpc
+├   └── main.tf └──
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+└── manifest/
+    ├── deployment.yaml
+    └── service.yaml
+```
 
 
