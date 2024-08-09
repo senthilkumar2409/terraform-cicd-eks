@@ -15,9 +15,8 @@ we’ll see the seamless integration of Jenkins and Terraform to automate the EK
 
 ## Terraform Configuration File:
 
-main.tf - Vpc and eks module 
-
 ```
+main.tf
 module "vpc" {
   source = "/workspaces/terraform-modules/workspace/modules/vpc"
   #aws_region = var.aws_region
