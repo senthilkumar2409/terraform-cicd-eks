@@ -132,4 +132,39 @@ VPC and EKS sub-module files are in modules directory
    <img width="862" alt="Screenshot 2024-08-09 at 4 00 26 PM" src="https://github.com/user-attachments/assets/e7ad9836-dd09-4e28-9813-522e0e6d5e10">
 
 
+## Jenkinsfile
+
+```groovy
+pipeline {
+    agent any
+
+    stages {
+        stage('terraform initialization') {
+            steps {
+            withCredentials([gitUsernamePassword(credentialsId: 'git_cred', gitToolName: 'Default')]) {
+                sh 'terraform init'
+            }  
+          }
+        }    
+        stage('terraform plan') {
+            steps {
+                sh 'terraform plan -var-file="vpc_ec2.tfvars"'
+            }
+        }
+        stage('terraform deploy') {
+            steps {
+                sh 'terraform destroy -var-file="vpc_ec2.tfvars" -auto-approve'
+            }
+        }
+    }
+}
+```
+
+* Now whenever we make changes and commit a script it will trigger a webhook and jenkins job trigger automatically.
+
+* Ensure that the build executed successfully and check the console
+   
+<img width="1052" alt="Screenshot 2024-08-09 at 4 04 49 PM" src="https://github.com/user-attachments/assets/753589ec-a45e-4355-a9b1-f40002774ced">
+
+
 
