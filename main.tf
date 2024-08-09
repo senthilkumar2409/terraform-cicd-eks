@@ -80,7 +80,7 @@ pipeline {
             }
         }
         stage('docker image scan') {
-            steps {
+          ]
        registry and docker push') {
             steps {
                 script{
