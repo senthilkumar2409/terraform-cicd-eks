@@ -116,5 +116,6 @@ variable "node_group_disk_size" { }
 variable "node_group_name" { }
 variable "cluster_public_access_cidrs" { }
 ```
+VPC and EKS sub-module files are in modules directory
 
 
