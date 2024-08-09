@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('terraform initialization') {
+        stage('terraform initialize') {
             steps {
             withCredentials([gitUsernamePassword(credentialsId: 'git_cred', gitToolName: 'Default')]) {
                 sh 'terraform init'
