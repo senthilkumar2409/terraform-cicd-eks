@@ -20,7 +20,7 @@ pipeline {
     agent any
 
     environment {
-        DEV_AWS_ACCOUNT = "43582935235"
+        DEV_AWS_ACCOUNT = "435829351243"
         TERRAFORM_APPLY = "YES"
         TERRAFORM_DESTROY = "NO"
     }
